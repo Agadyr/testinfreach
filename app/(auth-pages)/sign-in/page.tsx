@@ -30,6 +30,11 @@ export default function Login({ searchParams }: { searchParams: Message }) {
         <SubmitButton pendingText="Signing In..." formAction={signInAction}>
           Sign in
         </SubmitButton>
+        <p className="text-sm text-foreground">
+          <Link className="text-foreground font-medium" href="/sign-in">
+            Sign in for change password{" "}
+          </Link>
+        </p>
         <FormMessage message={searchParams} />
       </div>
     </form>

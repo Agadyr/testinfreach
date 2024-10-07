@@ -1,5 +1,6 @@
 import { createClient } from "@/utils/supabase/server";
 import { InfoIcon } from "lucide-react";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 
 export default async function ProtectedPage() {
@@ -28,6 +29,9 @@ export default async function ProtectedPage() {
           {JSON.stringify(user, null, 2)}
         </pre>
       </div>
+      <Link className="text-primary font-medium underline cursor-pointer" href="/protected/forgot-password">
+        Change your password
+      </Link>
     </div>
   );
 }
